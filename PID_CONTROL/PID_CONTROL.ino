@@ -1,3 +1,13 @@
+/*
+ * This example demonstrates PID control for Peliters (cooling)
+ * input - Themocouple reading temperature
+ * SetPoint - 30 
+ * output - PWM for Peliter output
+ * Usage: Serial input A, work; Serial input S, stop;
+ * By Shaoyu Cai
+ *
+ */
+
 #include <PID_v2.h>
 #include <max6675.h>
 
@@ -43,7 +53,7 @@ void setup()
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
 
-  Setpoint = 30;         // set the setpoint tem as 28 degree
+  Setpoint = 30;         // set the setpoint tem as 30 degree
   float temperature_reading = thermocouple.readCelsius();
   Input = temperature_reading;
   myPID.Start(Input, 0, Setpoint); //setpoint
@@ -77,6 +87,9 @@ void loop() {
 
       digitalWrite(in1, HIGH);
       digitalWrite(in2, LOW);
+
+      //digitalWrite(in1, LOW);
+      //digitalWrite(in2, HIGH);
       analogWrite(enA, output);
 
       // stop
