@@ -4,3 +4,5 @@ Sensors: FSRs sensor, Flex sensor, Microphone, Thermocouple, Accelerometer, BITa
 Actuators: ERM Vibrator, Servo, Peltiers, Pumps
 
 Control: closed-loop thermal control system and closed-loop pneumatic control system
+
+![image](https://github.com/shaoyuca/CDE5312/blob/main/modalities.png)
