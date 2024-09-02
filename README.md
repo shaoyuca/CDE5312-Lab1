@@ -1,4 +1,4 @@
-# NUS CDE5312-Lab#1: Prototyping for Modalities
+# NUS CDE5312
 This is the referenced code for NUS CDE5312 Beyond the Surface: Exploring Interactive Wearables 
 
 Lab#1: Prototyping for Modalities
