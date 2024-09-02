@@ -5,7 +5,7 @@ Lab#1: Prototyping for Modalities
 
 Sensors: FSRs sensor, Flex sensor, Microphone, Thermocouple, Accelerometer, BITalino
 
-Actuators: ERM Vibrator, Servo, Peltiers, Pumps
+Actuators: ERM Vibrator, Servo, Peltiers, Pumps (w/ air pressure sensor)
 
 Control: closed-loop thermal control system and closed-loop pneumatic control system
 
