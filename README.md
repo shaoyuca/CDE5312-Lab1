@@ -1,4 +1,4 @@
-# CDE5312-Lab#1: Prototyping for Modalities
+# NUS CDE5312-Lab#1: Prototyping for Modalities
 This is the referenced codes for NUS CDE5312-Lab#1: Prototyping for Modalities
 
 Sensors: FSRs sensor, Flex sensor, Microphone, Thermocouple, Accelerometer, BITalino
