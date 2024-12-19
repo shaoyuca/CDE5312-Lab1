@@ -5,12 +5,14 @@
  *
  */
 
-#define enA 9 // pwm pin
-#define in1 4
-#define in2 5
+int enA = 9; // pwm pin
+int in1 = 4;
+int in2 = 5;
+int STBY = 10; //standby
 
 void setup() {
   Serial.begin(9600);
+  pinMode(STBY, OUTPUT);
   pinMode(enA, OUTPUT);
   pinMode(in1, OUTPUT);
   pinMode(in2, OUTPUT);
@@ -24,7 +26,6 @@ void loop() {
   while(Serial.available() == 0){};
   int pwm_value = Serial.readString().toInt();
   if (pwm_value >= 0 && pwm_value <= 255){
-    analogWrite(enA, pwm_value);
     Serial.print("Strength: ");
     Serial.println(pwm_value);
 
@@ -32,7 +33,10 @@ void loop() {
     // If peliter, in1-HIGH, in2-LOW -> Hot, in1-LOW, in2-HIGH -> Cold
     digitalWrite(in1, HIGH);
     digitalWrite(in2, LOW);
-    delay(20);
+    analogWrite(enA, pwm_value);
+    digitalWrite(STBY, HIGH);
+   
+    //delay(20);
   }
   else {
     Serial.println("Invalid input!");
