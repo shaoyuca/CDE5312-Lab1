@@ -25,6 +25,7 @@ MAX6675 thermocouple(SCK_PIN, CS_PIN, SO_PIN);
 #define enA 9 //pwm pin
 #define in1 4
 #define in2 5
+int STBY = 10; //standby
 int pwmOutput;
 
 
@@ -50,6 +51,7 @@ void setup()
   pinMode(enA, OUTPUT);
   pinMode(in1, OUTPUT);
   pinMode(in2, OUTPUT);
+  pinMode(STBY, OUTPUT);
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
 
@@ -91,6 +93,7 @@ void loop() {
       //digitalWrite(in1, LOW);
       //digitalWrite(in2, HIGH);
       analogWrite(enA, output);
+      digitalWrite(STBY, HIGH);
 
       // stop
       wsg = Serial.read();             
@@ -99,7 +102,6 @@ void loop() {
   }
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
-
 }
 
 float temperature_reading = thermocouple.readCelsius();
@@ -109,6 +111,7 @@ delay(200);
 if (incomingByte == 'S'){
       digitalWrite(in1, LOW);
       digitalWrite(in2, LOW);
+      digitalWrite(STBY, LOW);
     }
   } 
 }
