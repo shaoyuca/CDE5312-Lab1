@@ -68,9 +68,10 @@ void loop() {
     if (incomingByte == 'A')
     {
       while(1){   
-      //float pressure = (voltage - 2.75) * 50; // -100~100 kpa
-      //float pressure = voltage * 107.0/4.0 - 40 - 107.0/8.0; // -40~67 kpa
+      //float voltage = sensorValue * (5.0 / 1023.0);
+      //float pressure = (voltage - 0.5) * 25; // -0~100 kpa
       //delay(200);
+        
       //Serial.print("Presure_value = ");  
       //Serial.println(pressure);
 
