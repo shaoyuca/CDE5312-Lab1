@@ -18,14 +18,12 @@ int SCK_PIN = 12; // Clock (SCK) pin
 
 MAX6675 thermocouple(SCK_PIN, CS_PIN, SO_PIN);
 
-#define PIN_INPUT 0
-#define PIN_OUTPUT 3
 
 // for tec control
 #define enA 9 //pwm pin
 #define in1 4
 #define in2 5
-int STBY = 10; //standby
+int STBY = 3; //standby
 int pwmOutput;
 
 
